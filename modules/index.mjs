@@ -73,9 +73,7 @@ ezSelector('#legacy-version-info-close').addEventListener('click', ({ target }) 
 const tokenInput = ezSelector('#token-input')
 {
     tokenInput.addEventListener('change', ({ target }) => {
-        if (DiscordToken.validate.token(target.value)) return
-        target.value = ''
-        alert('Invalid Token Format.')
+        
         target.focus()
     })
     ezSelector('#checkalive-btn').addEventListener('click', async ({ target }) => {
