@@ -104,9 +104,6 @@ const tokenInput = ezSelector('#token-input')
     const userIdInput = ezSelector('#userid-input'),
         dmContentInput = ezSelector('#dmcontent-input')
     userIdInput.addEventListener('change', ({ target }) => {
-        if (DiscordToken.validate.userId(target.value)) return
-        target.value = ''
-        alert('Invalid User Id Format.')
         target.focus()
     })
     ezSelector('#dmsend-btn').addEventListener('click', async ({ target }) => {
